@@ -1,0 +1,18 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def welcome():
+    return {
+        "message": "Welcome to the FastAPI app!"
+    }
+
+
+@app.get("/about")
+def about():
+    return {
+        "name": "Durga Mahesh Uppu",
+        "internship_title": "Software Development Intern"
+    }
